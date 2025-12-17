@@ -6,22 +6,20 @@ def fetch_random_user():
     data = response.json()
    
     if data["success"] and "data" in data:
-        user_data = data["data"]["data"][1  ]
-        '''username = user_data["login"]["username"]
+        user_data = data["data"]["data"][1]
+        username = user_data["login"]["username"]
         country = user_data["location"]["country"]
         gender = user_data["gender"]
-        return username, country, gender'''
-        return user_data
+        return username, country, gender
+        
     else:
         raise Exception("Failed to fetch data")
         
 
 def main():
     try:
-        userdata = fetch_random_user()
-        print(userdata)
-        # username, country, gender= fetch_random_user()
-        # print(f"Username: {username} \nCountry: {country} \nGender: {gender}")
+        username, country, gender = fetch_random_user()
+        print(f"Username: {username} \nCountry: {country} \nGender: {gender}")
     except Exception as e:
         print(str(e))
 
