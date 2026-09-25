@@ -1,0 +1,6 @@
+google-cloud-logging
+google-cloud-container
+streamlit
+pandas
+python-dotenv
+plotly
