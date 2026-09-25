@@ -45,6 +45,10 @@ def collect_logs():
 
     filter_string = f'''
         resource.type="k8s_container"
+        resource.labels.cluster_name="{CLUSTER_NAME}"
+        resource.labels.location="{CLUSTER_LOCATION}"
+        resource.labels.namespace_name="{NAMESPACE}"
+        severity >=ERROR
         timestamp >= "{timestamp}"
         '''
 

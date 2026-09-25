@@ -7,6 +7,7 @@ PROJECT_ID = os.getenv('GCP_PROJECT_ID')
 
 CLUSTER_NAME = os.getenv('GKE_CLUSTER_NAME')
 CLUSTER_LOCATION = os.getenv('GKE_CLUSTER_LOCATION')
+NAMESPACE = os.getenv("GKE_NAMESPACE")
 
 DEPLOYMENTS = [
     x.strip()
