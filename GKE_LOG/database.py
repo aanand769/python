@@ -1,7 +1,10 @@
 import sqlite3
-from config import DATABASE
+import os
+
+DATABASE = "data/logs.db"
 
 def create_database():
+    os.mkdirs("data", exist_ok=True)
 
     conn = sqlite3.connect(DATABASE)
 
@@ -65,3 +68,7 @@ def insert_log(
     conn.commit()
 
     conn.close()
+
+
+    if __name__=="__main__":
+        create_database()

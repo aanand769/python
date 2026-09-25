@@ -19,4 +19,3 @@ LOOKBACK_MINUTES = int (
     os.getenv('LOG_LOOKBACK_MINUTES','60')
 )
 
-DATABASE = 'data/logs.db'
